@@ -3,6 +3,18 @@ This project is aimed at forecasting stock dynamics by analyzing financial news 
 
 #### -- Project Status: Completed
 
+### Table of Contents  
+1. [Intro](#intro)  
+   - [Techniques Used](#techniques-used) 
+   - [Technologies](#technologies)
+2. [Methodology](#methodology)  
+   - [Dictionary-based Sentiment Analysis](#1-dictionary-based-sentiment-analysis)
+   - [Topic Modelling](#2-topic-modelling)
+   - [Neural Network](#3-neural-network)
+3. [Installation](#installation) 
+4. [Demo](#demonstation)
+5. [Contact](#contact)
+
 ## Intro
 
 The main goal of the project is to create a model that parses the news of the given company, transforms them into machine-readable format, extracts feauters and then returns prediction on the movement direction (up or down) for today using Deep Learning.
@@ -53,52 +65,38 @@ The sentiment scores are assigned separately for each news and dictionary based 
 
 Non-Negative Matrix Factorization model is applied for deriving the topics hidden in the news. Then, topics probability distributions are grouped by day, then the top-5 most probable topics among i-th day news are selected and transmitted to the final dataset. Finally, each ticker gets top-5 most relevant topics and their respective probabilities of being assigned for each day.
 
+
+### 3. Neural Network
 The ***third step*** is constructing the Neural Network using tensorflow and keras. Below you may find the architecture of the model fitted:
 
 <p align="center">
 <img width="329" alt="Screenshot 2023-03-03 at 12 36 02" src="https://user-images.githubusercontent.com/84684422/222721818-7c1e48c3-0d15-4269-8f74-dbffe11a6953.png">
 </p>
 
+The model is built with 3 ***Dense layers*** and 3 respective ***Batch Normalization*** layers. 
 
 
+## Installation
+
+1. Clone this repo: 
+
+`git clone https://github.com/Pavel-Polyanskiy/Stock-Price-movement-prediction-based-on-Financial-News`
+
+2. Install the requirements:
+
+`pip install requirements.txt`
+
+3. Run the Flask app in your browser:
+
+`python3 index.py`
 
 
-## Getting Started
-
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
-
-    *If using offline data mention that and how they may obtain the data from the froup)*
-    
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
-
-5. Follow setup [instructions](Link to file)
-
-## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
-
-
-## Contributing DSWG Members
-
-**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])(@slackHandle)**
-
-#### Other Members:
-
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|[Full Name](https://github.com/[github handle])| @johnDoe        |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
-
-## Contact
-* If you haven't joined the SF Brigade Slack, [you can do that here](http://c4sf.me/slack).  
-* Our slack channel is `#datasci-projectname`
-* Feel free to contact team leads with any questions or if you are interested in contributing!
-
-
+## Demonstation
 
 <video src=https://user-images.githubusercontent.com/84684422/221692818-4a984c2b-b957-4534-b7ff-a6938cd94047.mov width=180 ></video>
+
+## Contact
+✉️ pavelpolyanskiyhse@gmail.com
+
+
+
