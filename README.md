@@ -73,7 +73,7 @@ The ***third step*** is constructing the Neural Network using tensorflow and ker
 <img width="329" alt="Screenshot 2023-03-03 at 12 36 02" src="https://user-images.githubusercontent.com/84684422/222721818-7c1e48c3-0d15-4269-8f74-dbffe11a6953.png">
 </p>
 
-The model is built with 3 ***Dense layers*** and 3 respective ***Batch Normalization*** layers. 
+The model is built with 3 ***Dense layers*** and 3 respective ***Batch Normalization*** layers. Neural Network should be given a **ticker** and the **company name** in order to give the predictions: **up-** or **down-trend** for today with the confidence probability.
 
 
 ## Installation
